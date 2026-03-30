@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Miguel Soares</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-</head>
-<body>
-  <main>
+---
+layout: default
+---
+<main>
     <section class="hero">
       <div class="avatar">MS</div>
       <h1>Miguel Soares</h1>
-      <p class="tagline">Software Engineer · Building things that matter</p>
+      <p class="tagline">Lead Data Platform Engineer</p>
       <div class="links">
         <a href="https://github.com/miguelsoares" target="_blank" rel="noopener">GitHub</a>
       </div>
@@ -23,9 +14,17 @@
     <section class="section">
       <h2>About</h2>
       <p>
-        I'm a software engineer passionate about building reliable, scalable systems.
-        I enjoy working across the stack — from infrastructure and APIs to the interfaces people use every day.
-        Currently working at <strong>Funding Circle</strong>.
+        I've grown in the data world through hands-on experience — starting as a business analyst and moving through
+        engineering roles to where I am today. That journey has shaped how I think: I value context, curiosity, and
+        building solutions that are thoughtful, practical, and built to last.
+      </p>
+      <p>
+        I'm motivated by solving meaningful problems, creating systems that support teams at scale, and making data
+        genuinely useful.
+      </p>
+      <p>
+        These days, I'm focused on leading a data platform team, building foundations
+        that help organisations move faster, with more confidence and clarity.
       </p>
     </section>
 
@@ -64,12 +63,21 @@
 
     <section class="section">
       <h2>Writing</h2>
-      <p class="empty-state">Nothing published yet — check back soon.</p>
+      {% if site.posts.size > 0 %}
+      <ul class="posts">
+        {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="post-date">{{ post.date | date: "%B %Y" }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="empty-state">Nothing published yet &mdash; check back soon.</p>
+      {% endif %}
     </section>
 
     <footer>
-      <p>Made with plain HTML &amp; CSS · <a href="https://github.com/miguelsoares/miguelsoares.github.io" target="_blank" rel="noopener">Source</a></p>
+      <p>Made with plain HTML &amp; CSS &middot; <a href="https://github.com/miguelsoaress/miguelsoaress.github.io" target="_blank" rel="noopener">Source</a></p>
     </footer>
   </main>
-</body>
-</html>

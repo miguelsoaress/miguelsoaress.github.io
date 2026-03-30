@@ -251,3 +251,74 @@ footer a:hover {
   .hero { padding: 2.5rem 0 2rem; }
   .posts li { flex-direction: column; gap: 0.15rem; }
 }
+
+/* ── Post page ────────────────────────────────── */
+
+.post {
+  padding-top: 3rem;
+}
+
+.post-header {
+  margin-bottom: 2.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+  transition: color 0.15s;
+}
+
+.back-link:hover {
+  color: var(--text);
+}
+
+.post-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.post-header .post-date {
+  font-size: 0.85rem;
+}
+
+.post-content {
+  font-size: 0.975rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.post-content p { margin-bottom: 1.25rem; }
+.post-content h2 { font-size: 1.1rem; margin: 2rem 0 0.75rem; color: var(--text); text-transform: none; letter-spacing: 0; }
+.post-content h3 { font-size: 1rem; margin: 1.5rem 0 0.5rem; }
+.post-content ul, .post-content ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+.post-content li { margin-bottom: 0.35rem; }
+.post-content a { color: var(--accent); text-underline-offset: 3px; }
+.post-content strong { font-weight: 600; }
+.post-content code {
+  font-family: ui-monospace, 'Cascadia Code', monospace;
+  font-size: 0.875em;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+}
+.post-content pre {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+}
+.post-content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
