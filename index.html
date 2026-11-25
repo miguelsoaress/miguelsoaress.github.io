@@ -4,7 +4,6 @@ layout: default
 <main>
     <section class="hero">
       <h1>Miguel Soares</h1>
-      <p class="tagline">Lead Data Platform Engineer</p>
       <div class="links">
         <a href="https://github.com/miguelsoaress" target="_blank" rel="noopener">GitHub</a>
       </div>
@@ -60,22 +59,6 @@ layout: default
           </ul>
         </div>
       </div>
-    </section>
-
-    <section class="section">
-      <h2>Writing</h2>
-      {% if site.posts.size > 0 %}
-      <ul class="posts">
-        {% for post in site.posts %}
-        <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          <span class="post-date">{{ post.date | date: "%B %Y" }}</span>
-        </li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <p class="empty-state">Nothing published yet &mdash; check back soon.</p>
-      {% endif %}
     </section>
 
   </main>
